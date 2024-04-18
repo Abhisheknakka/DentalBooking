@@ -1,21 +1,4 @@
-About the project
-
-
-#to create a virtual environment
-python3 -m venv "virtual_environment_name"
-
-#to activate the virtual environment
-source "virtual_environment_name"/Scripts/activate
-
-#to deactivate your virtual environment
-deactivate
-
-The venv directory contains the virtual environment. Make sure to activate the virtual environment each time you work on your project by using the appropriate activation command based on your operating system.
-
-
-
-
-PROJECT structure
+# PROJECT structure
 
 /dental_booking_website
 |-- venv
