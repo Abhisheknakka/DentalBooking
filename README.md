@@ -1,5 +1,6 @@
 # PROJECT structure
 
+
 /dental_booking_website
 |-- venv
 |-- app
