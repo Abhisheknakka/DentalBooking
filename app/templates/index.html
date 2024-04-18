@@ -1,0 +1,152 @@
+<!-- app/templates/index.html -->
+
+
+
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-FTlK67w7h7Ujm9d9Lwq4lTTcAAeRzHpKtJtq8Wl9Df4vD1sC+X4N38U6vfIfniYtMVPYwxMj02nys8e+6wGdQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Add this in the head of your HTML file -->
+    <script src="https://unpkg.com/gsap@3.9.1/dist/gsap.min.js"></script>
+    <!-- Add this in the head of your HTML file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Dental Booking</title>
+
+    <style>
+        /* Add this to your head or your CSS file */
+        button[type="submit"] {
+            background-color: #007BFF; /* Set the background color */
+            color: #fff; /* Set the text color */
+            padding: 10px 20px; /* Add padding for better appearance */
+            border: none; /* Remove the default button border */
+            border-radius: 5px; /* Add border-radius for rounded corners */
+            cursor: pointer; /* Add a pointer cursor on hover */
+            transition: background-color 0.3s; /* Add a smooth transition effect */
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3; /* Change the background color on hover */
+        }
+    </style>
+</head>
+
+
+<body>
+     <header class="header">
+     
+        <div class="container-fluid text-center py-5 animate__animated animate__fadeIn" style="background-color: #05472A; color: #fff;">
+            <div class="jumbotron">
+                <h1 class="display-4">Welcome to Indira's Dental Booking</h1>
+            </div>
+        </div>
+     </header>
+
+    <section class="about-section mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>About Us</h2>
+                    <p class="lead" style="background-color: #05472A; color: #fff;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet turpis velit.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="{{ url_for('static', filename='images/dental_image.jpg') }}" alt="Dental Image" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container text-center mt-5">
+        <h2 class="text-primary">Our Services</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <i class="fas fa-tooth fa-3x mb-3 text-primary"></i>
+                <h4>Dental Checkups</h4>
+                <p>Regular checkups to keep your teeth healthy.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="fas fa-toothbrush fa-3x mb-3 text-primary"></i>
+                <h4>Teeth Cleaning</h4>
+                <p>Professional cleaning for a brighter smile.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="fas fa-smile fa-3x mb-3 text-primary"></i>
+                <h4>Smile Makeovers</h4>
+                <p>Transform your smile with cosmetic dentistry.</p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <h2 class="text-primary">Appointment Section</h2>
+    
+    <form method="post" action="{{ url_for('booking') }}">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <label for="time">Preferred Time:</label>
+        <input type="time" id="time" name="time" required><br><br>
+
+        <label for="chiefComplaint">Chief Complaint:</label><br>
+        <textarea type="complaint" id="chiefComplaint" name="chiefComplaint" rows='10' cols='50'required></textarea> <br>
+        
+        <button type="submit">Submit</button>  
+    </form>
+
+
+    
+
+    <section class="additional-info-section mt-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Additional Information</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="info-item">
+                        <h3>Emergency Services</h3>
+                        <p>For dental emergencies, call our emergency hotline at <strong>(123) 456-7890</strong>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+      <section class="image-gallery-section mt-5">
+        <div class="container">
+            <h2 class="text-center mb-4"> Our Clinic </h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="{{ url_for('static', filename='images/gallery1.jpg') }}" alt="Gallery Image 1" class="img-fluid rounded">
+                </div>
+                <div class="col-md-4">
+                    <img src="{{ url_for('static', filename='images/gallery2.jpg') }}" alt="Gallery Image 2" class="img-fluid rounded">
+                </div>
+                <div class="col-md-4">
+                    <img src="{{ url_for('static', filename='images/gallery3.jpg') }}" alt="Gallery Image 3" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+<!-- app/templates/index.html -->
+
+
+    
+
+  
+    
